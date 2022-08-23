@@ -274,11 +274,10 @@ dom_name=node1.test.com
     sed -i "s/CLOUDFLARE_EMAIL:.*/CLOUDFLARE_EMAIL: ${Cf_mail}/g" /etc/XrayR/config.yml
     sed -i "s/CLOUDFLARE_API_KEY:.*/CLOUDFLARE_API_KEY: ${Cf_key}/g" /etc/XrayR/config.yml
     echo ""
-    echo "写入完成，正在尝试重启XrayR服务..."
+    echo "写入配置完成，正在尝试重启XrayR服务..."
+    XrayR restart
+    XrayR status  
     echo
-
-
-
     echo -e ""
     echo "XrayR 管理脚本使用方法: "
     echo "------------------------------------------"
